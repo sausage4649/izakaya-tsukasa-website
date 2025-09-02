@@ -1,10 +1,140 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ja">
 <head>
-<title>テストページ</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>居酒屋つかさ</title>
+  <meta name="description" content="居酒屋つかさ 今日も今日とて、やきとりです。カウンター/宴会場/個室あり。" />
+  <style>
+    :root{--bg:#0d0d0d;--panel:#141414;--ink:#f2f2f2;--muted:#bdbdbd;--brand:#e7a12a;--accent:#e0523d;--line:#2a2a2a}html,body{height:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;color:var(--ink);background-color:var(--bg);background:radial-gradient(1200px 800px at 70% -10%,rgba(224,82,61,.15),transparent 60%),var(--bg)}main{display:block;color:var(--muted);font-size:12px}.container{max-width:1100px;margin-inline:auto;padding:0 16px}header{position:sticky;top:-1px;z-index:40;background:linear-gradient(to bottom,rgba(11,11,11,.9),rgba(11,11,11,.8) 80%,rgba(11,11,11,.1) 98%);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none}.brand .logo{width:40px;height:40px;border-radius:10px;background:conic-gradient(from 135deg,var(--brand),var(--accent));box-shadow:0 0 2px rgba(255,255,255,.08) inset}.brand h1{font-size:18px;margin:0}.brand small{display:block;color:var(--muted);font-size:10px}nav ul{display:flex;gap:16px}nav li{list-style:none;margin:0;padding:0}nav a{display:block;padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink)}.nav a.link:hover{background:rgba(255,255,255,.05)}.nav a.button{background:linear-gradient(90deg,var(--brand),var(--accent));color:#111;padding:10px 16px;font-weight:700}.nav a:focus{text-decoration:none;font-weight:700}.cta:hover{opacity:.95}/* hero */.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}.hero .inner{max-width:600px;text-align:center;padding:80px 0}.hero h2{font-size:40px;line-height:1.2;margin:0 0 16px}.hero p{font-size:16px;max-width:400px;margin-inline:auto}.hero .button-wrap{display:inline-flex;align-items:center;padding:8px;border:1px solid var(--line);border-radius:999px;background:#141414;border:1px solid var(--line);color:var(--muted);font-size:12px}.hero .button-wrap:hover{border-color:var(--muted);background:#181818}.hero button{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));border:1px solid var(--line);border-radius:999px;padding:14px 24px;color:var(--ink);font-weight:700}.hero .button:hover{border-color:var(--muted)}.hero button+button{border:1px dashed var(--line);color:var(--muted);letter-spacing:.3em}/* sections */.section{padding:48px 0;border-bottom:1px solid var(--line)}.section h2{font-size:24px;margin:0 0 40px;text-align:center}.section h2+*{margin-top:0}p{line-height:1.8}/* features */.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:24px}.card p:last-child{margin:0}.card:hover{background:rgba(255,255,255,.02)}/* menu */.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.menu-item{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 16px}.menu-item:last-child{border:0}.menu-item .price{font-weight:600}.menu-note{color:var(--muted);font-size:12px}/* news */.news-list{padding:16px;border:1px solid var(--line);border-radius:16px}.news-item{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:12px;background:#141414;border-bottom:1px solid var(--line)}.news-time{color:var(--muted);font-size:12px}.news-item:last-child{border:0}.news-item:hover{background:rgba(255,255,255,.02)}.news-title{color:var(--ink)}/* info */.info-grid{display:grid;grid-template-columns:1fr 2fr;gap:16px}.info-grid dl{display:grid;grid-template-columns:auto 1fr;gap:16px;background:var(--panel);border-radius:16px;padding:16px}.info-grid dt{border-bottom:1px dashed var(--line);padding-bottom:12px;margin-bottom:12px}.info-grid dd{margin:0;align-self:end}.info-grid iframe{width:100%;height:280px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),transparent)}footer{padding:30px 0;color:var(--muted);font-size:12px}.footer-inner{text-align:center}@media(max-width:580px){.hero,.wrap{grid-template-columns:1fr}}.features,.grid-template-columns-lfr{grid-template-columns:1fr}.menu-grid{grid-template-columns:1fr}.menu-item{display:block}.utility-flex{flex-wrap:nowrap}.utility-inline-flex{display:inline-flex}.menu-toggle{display:none;gap:8px;align-items:center;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:#141414;color:var(--ink)}.drawer{display:none}.drawer.open{display:block}
+  </style>
 </head>
 <body>
-<h1>こんにちは！</h1>
-<p>ウェブサイトは正しく表示されています。</p>
+  <main>
+    <header>
+      <div class="container">
+        <div class="header-inner">
+          <a href="./" class="brand">
+            <span class="logo"></span>
+            <div>
+              <h1>居酒屋つかさ</h1><small>izakaya-tsukasa</small>
+            </div>
+          </a>
+          <nav class="utility-flex">
+            <ul>
+              <li><a href="#menu" class="link">お品書き</a></li>
+              <li><a href="#info" class="link">店舗情報</a></li>
+            </ul><a href="tel:0000000000" class="button">電話予約</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="inner">
+        <h2>今日も今日とて、<br>やきとりです。</h2>
+        <p>カウンター/宴会場/個室あり。お一人様から団体様までおくつろぎいただけます。</p>
+        <div class="button-wrap"><a href="#info">店舗情報を見る</a></div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="section" id="features">
+        <h2>３つの特徴</h2>
+        <div class="features">
+          <div class="card">
+            <h3>うまい・やすい・はやい</h3>
+            <p>安くて旨いは当たり前。ネタの鮮度と大きさが自慢です。備長炭でじっくり焼き上げた本格やきとりを、お待たせすることなくご提供します。</p>
+          </div>
+          <div class="card">
+            <h3>お一人様から団体様まで</h3>
+            <p>お一人様でも気兼ねなく楽しめるカウンター席、グループでの飲み会に最適なテーブル席、接待や会食に使える個室など、様々なお席をご用意しています。</p>
+          </div>
+          <div class="card">
+            <h3>豊富なメニュー</h3>
+            <p>定番のやきとりから、旬の食材を使った一品料理、〆のご飯ものまで、幅広いメニューを取り揃えています。ドリンクも、ビール、日本酒、焼酎、カクテルなど豊富にご用意。</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="menu">
+        <h2>お品書き</h2>
+        <div class="menu-grid">
+          <div>
+            <div class="menu-item">
+              <div><b>やきとり各種</b><br><small>ねぎま・もも・かわ・すなぎも・レバー・はつ・ぼんじり・ささみ</small></div>
+              <div class="price">200円〜</div>
+            </div>
+            <div class="menu-item">
+              <div><b>やさい串各種</b><br><small>しいたけ・ししとう・アスパラ・トマト・たまねぎ</small></div>
+              <div class="price">200円〜</div>
+            </div>
+            <div class="menu-item">
+              <div><b>特製つくね</b><br><small>軟骨の食感がたまらない。たれ・しお・チーズ・月見</small></div>
+              <div class="price">300円</div>
+            </div>
+          </div>
+          <div>
+            <div class="menu-item">
+              <div><b>刺身盛り合わせ</b><br><small>その日仕入れた新鮮な魚介を贅沢に盛り合わせました。</small></div>
+              <div class="price">1,500円</div>
+            </div>
+            <div class="menu-item">
+              <div><b>だし巻き卵</b><br><small>ふわふわの食感と、じゅわっと広がる出汁の旨味。</small></div>
+              <div class="price">600円</div>
+            </div>
+            <div class="menu-item">
+              <div><b>鶏の唐揚げ</b><br><small>外はカリッと、中はジューシー。秘伝のタレに漬け込んだ自慢の一品。</small></div>
+              <div class="price">700円</div>
+            </div>
+          </div>
+        </div>
+        <p class="menu-note">※その他、季節限定メニューもございます。価格はすべて税込みです。</p>
+      </section>
+      <section class="section">
+        <h2>お知らせ</h2>
+        <div class="news-list">
+          <a href="#" class="news-item">
+            <div class="news-time">2024.08.15</div>
+            <div class="news-title">【期間限定】秋の味覚フェア開催中！さんまの塩焼き、きのこの天ぷらなど。</div>
+          </a>
+          <a href="#" class="news-item">
+            <div class="news-time">2024.07.01</div>
+            <div class="news-title">夏だ！ビールだ！飲み放題プランはじめました。</div>
+          </a>
+          <a href="#" class="news-item">
+            <div class="news-time">2024.06.20</div>
+            <div class="news-title">ウェブサイトを公開しました。</div>
+          </a>
+        </div>
+      </section>
+      <section class="section" id="info">
+        <h2>店舗情報</h2>
+        <div class="info-grid">
+          <div>
+            <dl>
+              <dt>店名</dt>
+              <dd>居酒屋つかさ</dd>
+              <dt>住所</dt>
+              <dd>〒891-0405 鹿児島県指宿市湊１丁目２−３</dd>
+              <dt>電話番号</dt>
+              <dd><a href="tel:0000000000">000-0000-0000</a></dd>
+              <dt>営業時間</dt>
+              <dd>17:00〜23:00</dd>
+              <dt>定休日</dt>
+              <dd>毎週水曜日</dd>
+              <dt>アクセス</dt>
+              <dd>JR指宿枕崎線 指宿駅から徒歩5分</dd>
+            </dl>
+          </div>
+          <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.864949504824!2d130.6318990753068!3d31.25056977439049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e9c44f4a3e201%3A0x69a2b5e236e62557!2z44CSODkxLTA0MDUg6bm_5YWQ5bO255yM5oyb5a6E5bi45biC5riv77yR5LiB55uu77yS4oiS77yT!5e0!3m2!1sja!2sjp!4v1725318625292!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p><small>&copy; 2024 居酒屋つかさ</small></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
