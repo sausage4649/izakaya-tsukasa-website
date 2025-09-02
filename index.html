@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>薩摩炭火やきとり 居酒屋つかさ｜指宿の焼き鳥</title>
+  <meta name="description" content="指宿・薩摩炭火やきとり 居酒屋つかさ。今日も今日とて、やきとりです。カウンター／宴会場／個室あり。" />
+  <style>
+    /* --------------------------------------------------
+      ☆ 初期設定：このファイルを index.html としてそのまま使えます
+      ▷ 差し替えポイント（TODO）
+        1) 電話番号、住所、営業時間
+        2) メニュー内容と写真（必要に応じて）
+        3) Google マップの埋め込み（アクセス欄のコメント参照）
+        4) SNS リンク（Instagram / X / note など）
+      -------------------------------------------------- */
+    :root{--bg:#0b0b0b;--panel:#141414;--ink:#f2f2f2;--muted:#bdbdbd;--brand:#e7a12a;--accent:#e0523d;--line:#2a2a2a}
+    html,body{height:100%}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;line-height:1.6;color:var(--ink);background:radial-gradient(1200px 800px at 70% -10%,rgba(224,82,61,.15),transparent 60%),var(--bg)}
+    a{color:inherit}
+    .container{max-width:1100px;margin-inline:auto;padding:0 16px}
+    header{position:sticky;top:0;z-index:40;background:linear-gradient(to bottom,rgba(11,11,11,.9),rgba(11,11,11,.5),transparent)}
+    .nav{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand .logo{width:40px;height:40px;border-radius:10px;background:conic-gradient(from 45deg,var(--brand),var(--accent));box-shadow:0 0 0 2px rgba(255,255,255,.08) inset}
+    .brand h1{font-size:18px;margin:0}
+    .brand small{display:block;color:var(--muted);font-size:12px}
+    .nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .nav a.link{padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink)}
+    .nav a.link:hover{background:rgba(255,255,255,.06)}
+    .cta{display:inline-block;background:linear-gradient(90deg,var(--brand),var(--accent));color:#111;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+    .cta:hover{opacity:.95}
+
+    /* hero */
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    .hero h2{font-size:40px;line-height:1.2;margin:0 0 8px}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .tag{display:inline-block;margin-right:8px;margin-bottom:8px;padding:6px 10px;border-radius:999px;background:#141414;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .hero .photo{aspect-ratio:4/3;border-radius:18px;background:radial-gradient(500px 300px at 70% 20%,rgba(231,161,42,.3),transparent 50%),linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));border:1px solid var(--line);position:relative;overflow:hidden}
+    .hero .photo::after{content:"炭火";position:absolute;inset:auto 12px 10px auto;font-size:12px;color:var(--muted);letter-spacing:.3em}
+
+    /* sections */
+    section{padding:48px 0;border-bottom:1px solid var(--line)}
+    section h3{font-size:24px;margin:0 0 10px}
+    section p.lead{color:var(--muted);margin:0 0 18px}
+
+    /* features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:16px}
+    .card h4{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* menu */
+    .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .menu-item{display:flex;justify-content:space-between;gap:14px;padding:12px 14px;border:1px dashed var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+    .menu-name{font-weight:600}
+    .menu-note{color:var(--muted);font-size:12px}
+
+    /* news */
+    .news{display:grid;gap:12px}
+    .news li{list-style:none;display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
+    .news time{color:var(--muted);font-size:12px;min-width:7ch}
+
+    /* access */
+    .info{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .info .box{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:16px}
+    .info dl{display:grid;grid-template-columns:8em 1fr;gap:8px 14px;margin:0}
+    .info dt{color:var(--muted)}
+    .map{height:280px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),transparent)}
+
+    footer{padding:30px 0;color:var(--muted)}
+
+    /* responsive */
+    @Pictures/Photos Library.photoslibrary/private/com.apple.mediaanalysisd/MediaAnalysis/mediaanalysis.db-wal (max-width: 880px){
+      .hero .wrap{grid-template-columns:1fr;gap:16px}
+      .features{grid-template-columns:1fr}
+      .menu-grid{grid-template-columns:1fr}
+      .info{grid-template-columns:1fr}
+      .nav ul{display:none}
+      .menu-toggle{display:inline-flex}
+    }
+    .menu-toggle{display:none;gap:8px;align-items:center;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:#151515;color:var(--ink)}
+    .drawer{display:none}
+    .drawer.open{display:block}
+  </style>
+</head>
+<body>
+  <a href="#main" style="position:absolute;left:-9999px;top:-9999px">本文へスキップ</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="トップへ戻る">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>薩摩炭火やきとり 居酒屋つかさ</h1>
+          <small>今日も今日とて、やきとりです。</small>
+        </div>
+      </a>
+      <nav aria-label="サイト内">
+        <button class="menu-toggle" aria-controls="drawer" aria-expanded="false" onclick="toggleMenu()">メニュー</button>
+        <ul>
+          <li><a class="link" href="#menu">メニュー</a></li>
+          <li><a class="link" href="#news">お知らせ</a></li>
+          <li><a class="link" href="#access">アクセス</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="tel:0993-22-4871" aria-label="電話で予約">電話で予約</a>
+    </div>
+    <div id="drawer" class="drawer container" aria-hidden="true">
+      <ul style="display:grid;gap:10px;list-style:none;margin:10px 0 0;padding:0">
+        <li><a class="link" href="#menu" onclick="toggleMenu(false)">メニュー</a></li>
+        <li><a class="link" href="#news" onclick="toggleMenu(false)">お知らせ</a></li>
+        <li><a class="link" href="#access" onclick="toggleMenu(false)">アクセス</a></li>
+        <li><a class="cta" href="tel:0993-22-4871" onclick="toggleMenu(false)">電話で予約</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="tag">指宿シティ</span>
+          <span class="tag">炭火×やきとり</span>
+          <span class="tag">カウンター／宴会場／個室あり</span>
+          <h2>炭とタレの湯気。
+            <br>こころがほどける一杯。</h2>
+          <p>鹿児島の旨味を、炭の香りで包む。<br>「今日も今日とて、やきとりです」<br>「焼き鳥でビッグスマイル！」をモットーに、皆様をお待ちしております。</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+            <a class="cta" href="tel:0993-22-4871">電話で予約</a>
+            <a class="link" href="#menu" style="border:1px solid var(--line);padding:10px 14px;border-radius:12px;text-decoration:none">メニューを見る</a>
+          </div>
+        </div>
+        <div class="photo" aria-label="炭火のイメージ写真（差し替え推奨）"></div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h3>つかさのこだわり</h3>
+        <p class="lead">一本一本の串に、手間と誠意を。地元の食卓を、あったかく。</p>
+        <div class="features">
+          <div class="card"><h4>炭火一筋</h4><p>香りも旨味も“炭”頼み。じっくり火を通し、外は香ばしく中はしっとり。</p></div>
+          <div class="card"><h4>タレと塩</h4><p>甘辛のタレ、きりっと塩。定番に小さな工夫を重ねて、今日もちょうどいい。</p></div>
+          <div class="card"><h4>居心地</h4><p>お一人さまのカウンター、みんなでワイワイの宴会場、落ち着ける個室も。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="container">
+        <h3>メニュー（一例）</h3>
+        <p class="lead">※内容は日によって変わります。詳しくは店内メニューをご覧ください。</p>
+        <div class="menu-grid" aria-describedby="menu-note">
+          <div class="menu-item"><span class="menu-name">薩摩豚バラで巻いた野菜巻き</span><span class="menu-note">彩り豊かな定番串</span></div>
+          <div class="menu-item"><span class="menu-name">薩摩鶏のたたき</span><span class="menu-note">新鮮だから、うまい</span></div>
+          <div class="menu-item"><span class="menu-name">ハツ</span><span class="menu-note">塩がよく合う</span></div>
+          <div class="menu-item"><span class="menu-name">レバー</span><span class="menu-note">濃厚な味わい</span></div>
+          <div class="menu-item"><span class="menu-name">セセリ</span><span class="menu-note">プリプリの食感</span></div>
+          <div class="menu-item"><span class="menu-name">鶏もも</span><span class="menu-note">やきとりの王道</span></div>
+          <div class="menu-item"><span class="menu-name">皮</span><span class="menu-note">パリっと香ばしく</span></div>
+          <div class="menu-item"><span class="menu-name">砂ずり</span><span class="menu-note">コリコリ食感</span></div>
+        </div>
+        <p id="menu-note" class="lead" style="margin-top:12px">団体さま向けコース・飲み放題はご相談ください。</p>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="container">
+        <h3>お知らせ</h3>
+        <ul class="news" aria-live="polite">
+          <li><time datetime="2025-08-01">2025/08/01</time><div>【お盆期間の営業】日程が決まり次第、こちらでお知らせします。</div></li>
+          <li><time datetime="2025-07-15">2025/07/15</time><div>【ご予約について】お電話がスムーズです。ピーク時間はつながりにくい場合があります。</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="access">
+      <div class="container">
+        <h3>アクセス</h3>
+        <div class="info">
+          <div class="box">
+            <dl>
+              <dt>店名</dt><dd>薩摩炭火やきとり 居酒屋つかさ</dd>
+              <dt>住所</dt><dd>鹿児島県指宿市湊２−６−11</dd>
+              <dt>営業時間</dt><dd>17:00–23:00</dd>
+              <dt>定休日</dt><dd>日曜日</dd>
+              <dt>座席</dt><dd>カウンター／宴会場／個室 あり</dd>
+              <dt>予約</dt><dd><a href="tel:0993-22-4871">0993-22-4871</a>（お電話がスムーズです）</dd>
+              <dt>SNS</dt><dd>
+                <a href="https://www.instagram.com/sausage_presudennt/" aria-label="Instagram へ" target="_blank" rel="noopener noreferrer">Instagram</a>・
+                <a href="https://twitter.com/soseijisan" aria-label="X(Twitter) へ" target="_blank" rel="noopener noreferrer">X</a>・
+                <a href="https://note.com/masatake1139" aria-label="note へ" target="_blank" rel="noopener noreferrer">note</a>
+              </dd>
+            </dl>
+          </div>
+          <div class="box">
+            <div class="map" role="img" aria-label="地図">
+              <iframe src="https://www.google.com/maps?q=鹿児島県指宿市湊２−６−11&output=embed" width="100%" height="100%" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <p class="lead" style="margin-top:12px">JR指宿駅から徒歩約5分。お車でお越しの際は、近隣のコインパーキングをご利用ください。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+      <small>© 2025 薩摩炭火やきとり 居酒屋つかさ</small>
+      <small>さつますみびやきとりいざかやつかさ｜ビッグスマイルでお待ちしています。</small>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(force){
+      const d=document.getElementById('drawer');
+      const btn=document.querySelector('.menu-toggle');
+      const willOpen = force===undefined ? !d.classList.contains('open') : force;
+      d.classList.toggle('open', willOpen);
+      btn.setAttribute('aria-expanded', willOpen);
+      d.setAttribute('aria-hidden', !willOpen);
+    }
+  </script>
+</body>
+</html>
